@@ -1,23 +1,21 @@
-
+import java.util.*;
 /**
- * Write a description of class Game here.
+ * Contains most of the game logic as well as the running methods etc.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Kyle Leach (DarkLeach7) 
+ * @version 1a
  */
-public class Game
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
+public class Game{
+    char[][] map;
+    Stack <Enemy> enemyStack;
     /**
      * Constructor for objects of class Game
      */
     public Game()
     {
-        // initialise instance variables
-        x = 0;
-    }
+        map = new char[20][20];
+        enemyStack = new Stack <Enemy>();
+    }//ends constructor 0 args
 
     /**
      * An example of a method - replace this comment with your own
@@ -25,9 +23,9 @@ public class Game
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void generateStack(){
+        for(int i=0; i <= 20; i++){
+            enemyStack.push(new TestEnemy(0));
+        }//end for loop
     }
 }
